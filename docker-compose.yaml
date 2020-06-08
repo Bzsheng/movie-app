@@ -1,0 +1,17 @@
+
+version: '3'
+
+services:
+  movieapp:
+    build: .
+    expose:
+      - 3000
+    labels:
+      - traefik.http.routers.movieapp.rule=Host(`movieapp.buzuosheng.com`)
+      - traefik.http.routers.movieapp.tls=true
+      - traefik.http.routers.movieapp.tls.certresolver=le
+
+networks: 
+  default:
+    external: 
+      name: traefik_default
