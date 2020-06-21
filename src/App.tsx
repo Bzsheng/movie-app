@@ -26,18 +26,15 @@ const App: React.FC = () => {
   const [movie, setMovie] = useState(initState)
 
   return (
-    <div>
-      <div className='header'></div>
-      <div className='movie_main'>
-        <img height={300} width={200} alt={movie.name} src={movie.img} />
-        <p>{'《' + movie.name + '》'}</p>
-        <p>{movie.info || ''}</p>
-        <button onClick={Getmovie}>
-          换一部
-        </button>
-        <p>截屏分享</p>
-        <img alt='截屏分享' height={40} width={40} src={qr} />
-      </div>
+    <div className='movie_main'>
+      <img className='cover' alt={movie.name} src={movie.img} />
+      <p>{'《' + movie.name + '》'}</p>
+      <p>{movie.info || ''}</p>
+      <button onClick={Getmovie}>
+        换一部
+      </button>
+      <p>截屏分享</p>
+      <img alt='截屏分享' height={40} width={40} src={qr} />
     </div>
   )
 }

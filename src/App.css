@@ -1,17 +1,14 @@
+.cover {
+	width: 18.75rem;
+	height: calc(18.75rem * 1.5);
+}
+
 .movie_main {
 	flex-direction: column;
-	width: 40%;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin: 0 30%;
 	align-items: center;
-}
-
-.header {
-	display: flex;
-	align-items: center;
-	height: 2rem;
 }
 
 p {

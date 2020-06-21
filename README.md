@@ -34,7 +34,7 @@
 const fetcher = (url: string) =>
   fetch(url)
     .then(r => r.json())
-            
+
 const { data } = useSWR('http://localhost:7001/movie', fetcher)
 ```
 
