@@ -4,6 +4,8 @@ import { useState } from 'react';
 import qr from './qr.png'
 import fetch from 'unfetch'
 import useSWR from 'swr';
+import WeChat from './WeChat.jpg'
+import { Helmet } from 'react-helmet'
 
 const App: React.FC = () => {
 
@@ -27,6 +29,12 @@ const App: React.FC = () => {
 
   return (
     <div className='movie_main'>
+      <Helmet>
+        <title>每天看一部高分电影</title>
+        <meta name="description" content="每天看一部高分电影" />
+        <meta name="keywords" content="电影,高分电影,豆瓣top250,豆瓣电影" />
+      </Helmet>
+      <img className='WeChat' alt='微信公众号-大前端合集' src={WeChat} />
       <img className='cover' alt={movie.name} src={movie.img} />
       <p>{'《' + movie.name + '》'}</p>
       <p>{movie.info || ''}</p>
